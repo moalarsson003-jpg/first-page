@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Startsida</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+
+    <body>
+        <header>
+            <div class ="header-container">
+            <img src="images/6104776461_4c9af76020_q.webp" class="logo" alt="Hotellets logga">
+            <img src="images/Hotel_pool_with_palms_at_night.webp" class="hotel" alt="Hotellet">
+            </div>
+
+            <div class="topnav" id="myTopnav">
+            
+                <a href="index.html" class="active">Startsida</a>
+                <a href="hitta.html">Hitta</a>
+                <a href="boka.html">Boka</a>
+                <a href="kontakt.html">Kontakt</a>
+                <button class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+            <article>
+            <h2>Välkommen</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis elit sapien. Donec tincidunt sapien a risus tempor malesuada. 
+                Nam eget feugiat ligula, eu imperdiet ligula. Nulla tincidunt est id mattis placerat. Nam varius quam vel lectus sagittis pulvinar. 
+                Aenean convallis ipsum id urna placerat, eget aliquam libero vehicula. Suspendisse malesuada sit amet justo non fringilla. 
+                Phasellus consectetur odio ut turpis mollis pellentesque. </p>
+            </article>
+            
+            <article>
+                <h2>Vårat hotell</h2>
+                <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="images/Hotel_pool_with_palms_at_night.webp" style="width:100%" alt="Pool nummer 1">
+                    <div class="text">Pool nummer 1</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="images/49168926753_62e15fd824_c.webp" style="width:100%" alt="Pool nummer 2">
+                    <div class="text">Pool nummer 2</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="images/54787796808_941fcb66ba_c.webp" style="width:100%" alt="Hotellrum">
+                    <div class="text">Hotellrum</div>
+                </div>
+
+                <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+                <button class="next" onclick="plusSlides(1)">&#10095;</button>
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            </article>
+            </div>
+
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    let i;
+                    let slides =
+                    document.getElementsByClassName("mySlides");
+                    let dots = 
+                    document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace("active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";
+                    dots[slideIndex-1].className += " active";
+                }
+
+                function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+            </script>
+
+        </main>
+
+        <footer>
+            <p>Hotell Royale | Storgatan 1 | 123 45 Storstad | 012 - 12 34 56</p>
+        </footer>
+    </body>
+</html>

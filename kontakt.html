@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kontakta oss</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+
+    <body>
+        <header>
+        <div class ="header-container">
+            <img src="images/6104776461_4c9af76020_q.webp" class="logo" alt="Hotellets logga">
+            <img src="images/Hotel_pool_with_palms_at_night.webp" class="hotel" alt="Hotellet">
+        </div>
+
+        <div class ="topnav" id="myTopnav">
+            <a href="index.html">Startsida</a>
+            <a href="hitta.html">Hitta</a>
+            <a href="boka.html">Boka</a>
+            <a href="kontakt.html" class="active">Kontakt</a>
+            <button class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </button>
+    </div>
+        
+    </header>
+
+    <main>
+
+        <div class="container">
+                <article>
+                    <h2>Kontakta oss</h2>
+                    <form action="https://httpbin.org/post" method="post">
+                        <fieldset>
+                           
+                            <legend>Kontaktinformation</legend>
+                            <label for="name">Förnamn:</label>
+                            <input type="text" id="name" name="first-name" placeholder="Förnamn"><br>
+                            <label for="last-name">Efternamn:</label>
+                            <input type="text" id="last-name" name="last-name" placeholder="Efternamn"><br>
+                            <label for="email">E-post:</label>
+                            <input type="email" id="email" name="email" placeholder="din-epost@exempel.se"><br>
+                            <label for="number">Telefonnummer:</label>
+                            <input type="number" id="number" name="phone-number" placeholder="012 34 56 78"><br>
+                            <p><label for="meddelande">Meddelande:</label></p>
+                            <textarea id="meddelande" name="meddelande" rows="4" cols="50"></textarea>
+                                
+                                <button type="submit">Skicka</button>
+
+                        </fieldset>
+                    </form>
+                </article>
+
+                <article>
+                <img src="images/3667332096_7f18c347ec_c.webp" alt="Hotellet">
+            </article>
+            </div>
+        <script>
+            function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+        </script>
+
+    </main>
+    <footer>
+            <p>Hotell Royale | Storgatan 1 | 123 45 Storstad | 012 - 12 34 56</p>
+        </footer>
+    </body>
+
+
+</html>
